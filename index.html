@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+  <style>
+    * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.profile-pic img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.about-content {
+  max-width: 600px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>About Me</h1>
+  </header>
+  
+  <div class="container">
+    <div class="profile-pic">
+      <img src="./IMG_5623.jpg" alt="Profile Picture">
+    </div>
+    <div class="about-content">
+      <p>As an upcoming web designer, I am excited to combine my creativity, technical skills, and passion for user experience to create visually stunning and functional websites. With a strong foundation in design principles and a keen eye for aesthetics, I strive to deliver intuitive and engaging online experiences for users. My journey into web design began with my fascination for how websites can blend artistry and functionality. I have spent countless hours exploring different design styles, experimenting with color palettes, and studying user interface trends to stay up-to-date with the ever-evolving digital landscape. I am well-versed in HTML, CSS, and JavaScript, and I continuously expand my knowledge by keeping up with the latest web development techniques and tools. I believe that a successful website is not just visually appealing,</p>
+      <p>but also intuitive and user-friendly. Therefore, I always strive to create responsive designs that adapt seamlessly to different devices, ensuring an optimal experience for users across platforms.
+            
+        In addition to my technical skills, I possess a strong sense of empathy and user-centered design. I believe in putting myself in the shoes of the end-users, understanding their needs, and designing interfaces that are intuitive and easy to navigate. I pay attention to details, ensuring that every element of a website serves a purpose and contributes to a cohesive user experience.
+        
+        As I continue to grow as a web designer, I am eager to take on new challenges and push the boundaries of creativity. I constantly seek inspiration from various sources, from nature to art, as I believe that the best designs are often influenced by the world around us.
+        
+        In summary, I am an upcoming web designer with a passion for creating visually captivating and user-friendly websites. With my technical skills, creativity, and dedication to delivering exceptional designs, I am excited to contribute to the ever-evolving world of web design and help businesses and individuals establish a strong online presence.</p>
+    </div>
+  </div>
+  
+  <footer>
+    <p>&copy; 2023 Henry Dustin. All rights reserved.</p>
+  </footer>
+  
+  <script>
+    window.addEventListener('resize', adjustContainerHeight);
+    
+    function adjustContainerHeight() {
+      const container = document.querySelector('.container');
+      const headerHeight = document.querySelector('header').offsetHeight;
+      const footerHeight = document.querySelector('footer').offsetHeight;
+      const windowHeight = window.innerHeight;
+      
+      container.style.minHeight = (windowHeight - headerHeight - footerHeight) + 'px';
+    }
+    
+    // Adjust container height on initial page load
+    adjustContainerHeight();
+  </script>
+</body>
+</html>
